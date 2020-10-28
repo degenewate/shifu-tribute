@@ -1,4 +1,4 @@
-export default function OwOfy(v: string) {
+export  function OwOfy(v: string) {
     v = v.replace(/(?:r|l)/g, "w");
     v = v.replace(/(?:R|L)/g, "W");
     v = v.replace(/n([aeiou])/g, "ny$1");
