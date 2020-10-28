@@ -10,6 +10,8 @@
   "dependencies": {
     "bulma": "^0.9.1",
     "core-js": "^3.6.5",
+    "emoji-from-word": "^1.2.12",
+    "to-zalgo": "^1.0.1",
     "vue": "^3.0.0"
   },
   "devDependencies": {
