@@ -7,7 +7,7 @@ export  function OwOfy(v: string) {
     v = v.replace(/ove/g, "uv");
     const faces = ["(・`ω´・)", ";;w;;", "owo", "UwU", ">w<", "^w^"]
     v = v.replace(
-      /\!+/g,
+      /!+/g,
       " " + faces[Math.floor(Math.random() * faces.length)] + " "
     );
     return v
