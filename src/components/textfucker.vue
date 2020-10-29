@@ -10,10 +10,25 @@
       ></textarea>
     </div>
     <div class="level is-mobile m-3">
-      <button class="button is-danger is-rounded level-item is-hoverable" @click="Convert()">
-        lets gooo
+      <button
+        class="button is-danger is-rounded level-item is-hoverable"
+        @click="OWO()"
+      >
+        uwu
+      </button>
+      <button
+        class="button is-danger is-rounded level-item is-hoverable"
+        @click="evil()"
+      >
+        doing ur mom
       </button>
       <CopyBTN class="level-item is-rounded" :text="text" />
+      <button
+        class="button is-primary is-rounded level-item is-hoverable"
+        @click="text = ''"
+      >
+        reset
+      </button>
     </div>
   </div>
 </template>
@@ -21,15 +36,12 @@
 import { defineComponent } from "vue";
 import CopyBTN from "@/components/CopyToClipboardBtn.vue";
 import { OwOfy } from "@/functions/OWOfy";
-import {} from "@/functions/Emojify";
-import {} from "@/functions/zalgo";
+import { zalgofy } from "@/functions/zalgo";
+import { RandNum } from "@/functions/num-utils";
 export default defineComponent({
   name: "text-fucker",
   components: {
     CopyBTN
-  },
-  setup() {
-    OwOfy;
   },
   data() {
     return {
@@ -38,8 +50,11 @@ export default defineComponent({
     };
   },
   methods: {
-    Convert() {
+    OWO() {
       this.text = OwOfy(this.text);
+    },
+    evil() {
+      this.text = zalgofy(this.text);
     }
   }
 });

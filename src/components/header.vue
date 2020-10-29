@@ -7,8 +7,11 @@
       aria-label="main navigation"
     >
       <div class="navbar-brand">
-        <a class="navbar-item" to="/">
-          <img src="" />
+        <a class="navbar-item">
+          <img
+            src="https://listimg.pinclipart.com/picdir/s/359-3591702_splashing-sweat-sweat-drops-emoji-transparent-clipart.png"
+            alt=""
+          />
         </a>
         <a
           role="button"
@@ -26,11 +29,17 @@
       </div>
       <div class="navbar-menu" :class="{ 'is-active': MobileToggle }">
         <div class="navbar-start">
-          <a @click="ToggleNav" class="navbar-item"> pog </a>
+          <a  class="navbar-item" @click="thighs"> thighs </a>
           <div class="navbar-item has-dropdown is-hoverable">
             <a class="navbar-link">Moreee</a>
             <div class="navbar-dropdown">
-              <a class="navbar-item" @click="ToggleNav"> cumwade </a>
+              <a
+                class="navbar-item"
+                @click="ToggleNav"
+                href="https://www.youtube.com/watch?v=iWpCdUQLWwU"
+              >
+                cumwade
+              </a>
               <hr class="navbar-divider" />
               <a class="navbar-item" @click="die"> die. </a>
             </div>
@@ -85,19 +94,29 @@ export default defineComponent({
     die() {
       Swal.fire({
         title: "no.",
-        showDenyButton: true,
-        showCancelButton: true,
         confirmButtonText: `understandable`,
-        denyButtonText: `fuck u website`
+        showCancelButton: true,
+        cancelButtonText: "no fuck u"
       }).then(result => {
         /* Read more about isConfirmed, isDenied below */
-        if (result.isDenied) {
+        if (result.isDismissed) {
           Swal.fire({
-              title: "rude.",
-              icon: "error"
-          })
+            title: "rude.",
+            icon: "error"
+          });
+        } else if (result.isConfirmed) {
+          Swal.fire({
+            title: "pog.",
+            icon: "success"
+          });
         }
       });
+    },
+    thighs(){
+      Swal.fire({
+        title: " ok i get it ur horny",
+        text: "now go back to the cumdump smh"
+      })
     }
   },
   mounted() {

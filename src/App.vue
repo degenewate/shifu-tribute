@@ -23,7 +23,7 @@ export default defineComponent({
 
 <style lang="scss">
   @import "../node_modules/bulma/bulma.sass";
-  @import '~@sweetalert2/theme-bulma/bulma.scss';
+  @import '../node_modules/@sweetalert2/theme-bulma/bulma.scss';
 
   #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
